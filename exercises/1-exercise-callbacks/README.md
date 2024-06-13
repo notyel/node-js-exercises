@@ -49,7 +49,7 @@ Para ejecutar el programa en Node.js y buscar usuarios por ID, sigue estos pasos
 5. El programa mostrará en la consola los resultados de la búsqueda de usuarios por ID.
 
 ¡Eso es todo! Ahora puedes utilizar el comando `npm start` para ejecutar el programa y ver cómo se manejan los callbacks en Node.js.
-```
+
 ### Estructura del Proyecto
 
 Para mantener una estructura organizada, asegurémonos de que todos los archivos estén en sus ubicaciones correctas:
