@@ -1,6 +1,6 @@
 # Node.js Exercises
 
-Este repositorio contiene una colección de ejercicios en Node.js junto con sus soluciones. Los ejercicios están diseñados para ayudarte a mejorar tus habilidades de programación en C#.
+Este repositorio contiene una colección de ejercicios en Node.js junto con sus soluciones. Los ejercicios están diseñados para ayudarte a mejorar tus habilidades de programación en Node.js.
 
 ## Estructura de Carpetas
 
