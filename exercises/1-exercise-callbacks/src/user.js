@@ -21,7 +21,6 @@ function getUserById(id, callback) {
     return callback(null, user);
 }
 
-
 module.exports = {
     getUserById,
 }
