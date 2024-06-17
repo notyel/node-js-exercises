@@ -23,5 +23,6 @@ Si tienes ejercicios interesantes en Node.js que te gustaría agregar a este rep
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
 
-¡Diviértete programando en Node.js!
+¡**Diviértete programando en Node.js**!
+
 
