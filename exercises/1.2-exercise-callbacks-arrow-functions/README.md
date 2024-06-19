@@ -9,7 +9,7 @@ El código proporcionado contiene una función `getUserById(id, callback)` que t
 ### Ejemplo de uso
 
 ```javascript
-const { getUserById } = require("./src/user");
+const { getUserById } = require('./src/user');
 
 getUserById(1, (error, user) => {
   if (error) {
@@ -55,7 +55,7 @@ Para ejecutar el programa en Node.js y buscar usuarios por ID, sigue estos pasos
 Para mantener una estructura organizada, asegurémonos de que todos los archivos estén en sus ubicaciones correctas:
 
 ```
-1-exercise-callbacks/
+1.2-exercise-callbacks-arrow-functions/
 ├── package.json
 ├── README.md
 └── src/
