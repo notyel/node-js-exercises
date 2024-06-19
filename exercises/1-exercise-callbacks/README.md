@@ -9,7 +9,7 @@ El código proporcionado contiene una función `getUserById(id, callback)` que t
 ### Ejemplo de uso
 
 ```javascript
-const { getUserById } = require('./src/user');
+const { getUserById } = require("./src/user");
 
 getUserById(1, (error, user) => {
   if (error) {
