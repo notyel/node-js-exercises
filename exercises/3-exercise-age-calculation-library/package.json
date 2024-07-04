@@ -1,13 +1,13 @@
 {
-  "name": "2-exercise-factory",
+  "name": "3-exercise-age-calculation-library",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT",
-  "description": "",
+  "license": "ISC",
   "dependencies": {
     "age-calculation-library": "^1.0.0"
   }
