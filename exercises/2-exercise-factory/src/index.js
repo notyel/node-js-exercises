@@ -1,4 +1,3 @@
-// Importar la función de cálculo de edad desde la biblioteca
 const { getAge, getUUID } = require("./plugins");
 const { buildMakePerson } = require("./factories/personFactory");
 
