@@ -1,9 +1,8 @@
 // Importar la función de cálculo de edad desde la biblioteca
-const { calculateAge } = require("age-calculation-library");
+const { getAge, getUUID } = require("./plugins");
+const { buildMakePerson } = require("./factories/personFactory");
 
-// Fecha de nacimiento para calcular la edad
-const fechaNacimiento = "1987-06-28";
-
-// Calcular la edad basada en la fecha actual
-const edad = calculateAge(fechaNacimiento);
-console.log(`La edad es: ${edad}`);
+const makePerson = buildMakePerson({ getUUID, getAge });
+const obj = { name: "John", birthdate: "1985-10-21" };
+const john = makePerson(obj);
+console.log({ john });
