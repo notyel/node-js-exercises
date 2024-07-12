@@ -33,6 +33,26 @@ app.post("/students", (req, res) => {
   stmt.finalize();
 });
 
+// Ruta para actualizar un estudiante
+app.put("/students/:id", (req, res) => {
+  const { id } = req.params;
+  const { name, age } = req.body;
+
+  const stmt = db.prepare("UPDATE students SET name = ?, age = ? WHERE id = ?");
+  stmt.run(name, age, id, function (err) {
+    if (err) {
+      res.status(500).send(err.message);
+      return;
+    }
+    if (this.changes === 0) {
+      res.status(404).send("Estudiante no encontrado");
+      return;
+    }
+    res.json({ message: "Estudiante actualizado con éxito" });
+  });
+  stmt.finalize();
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
