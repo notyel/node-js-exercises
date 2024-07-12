@@ -1,11 +1,13 @@
-// src/server.js
 const express = require("express");
 const db = require("./database");
 const bodyParser = require("body-parser");
+const cors = require("cors");
+const { calculateAge } = require("age-calculation-library");
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 // Ruta para obtener todos los estudiantes
@@ -15,15 +17,22 @@ app.get("/students", (req, res) => {
       res.status(500).send(err.message);
       return;
     }
-    res.json(rows);
+
+    // Calcular la edad de cada estudiante
+    const studentsWithAge = rows.map(student => {
+      const age = calculateAge(student.birth_date);
+      return { ...student, age };
+    });
+
+    res.json(studentsWithAge);
   });
 });
 
 // Ruta para crear un nuevo estudiante
 app.post("/students", (req, res) => {
-  const { name, age } = req.body;
-  const stmt = db.prepare("INSERT INTO students (name, age) VALUES (?, ?)");
-  stmt.run(name, age, function (err) {
+  const { name, birth_date } = req.body;
+  const stmt = db.prepare("INSERT INTO students (name, birth_date) VALUES (?, ?)");
+  stmt.run(name, birth_date, function (err) {
     if (err) {
       res.status(500).send(err.message);
       return;
@@ -36,10 +45,10 @@ app.post("/students", (req, res) => {
 // Ruta para actualizar un estudiante
 app.put("/students/:id", (req, res) => {
   const { id } = req.params;
-  const { name, age } = req.body;
+  const { name, birth_date } = req.body;
 
-  const stmt = db.prepare("UPDATE students SET name = ?, age = ? WHERE id = ?");
-  stmt.run(name, age, id, function (err) {
+  const stmt = db.prepare("UPDATE students SET name = ?, birth_date = ? WHERE id = ?");
+  stmt.run(name, birth_date, id, function (err) {
     if (err) {
       res.status(500).send(err.message);
       return;
