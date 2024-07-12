@@ -25,6 +25,10 @@ db.serialize(() => {
   stmtSubjects.run("Math", "Basic Mathematics");
   stmtSubjects.run("Science", "Basic Science");
   stmtSubjects.run("History", "World History");
+  stmtSubjects.run("Literature", "World Literature");
+  stmtSubjects.run("Physics", "Basic Physics");
+  stmtSubjects.run("Art", "Introduction to Art");
+  stmtSubjects.run("Computer Science", "Introduction to Programming");
   stmtSubjects.finalize();
 
   // Crear la tabla intermedia student_subjects
