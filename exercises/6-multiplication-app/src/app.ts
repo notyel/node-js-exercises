@@ -1,21 +1,13 @@
-import fs from "fs";
+import { args } from "./adapters/args.adapter";
+import { ServerApp } from "./presentation/server-app";
 
-let outputMessage = "";
-const base = 5;
-const headerMesagge = `
-===========================================
-        Tabla del ${base}
-===========================================\n
-`;
 
-for (let i = 1; i <= 10; i++) {
-    outputMessage += `${base} x ${i} = ${base * i}\n`
+(async () => {
+    await main();
+})();
+
+async function main() {
+    const { b: base, l: limit, s: showTable } = args;
+    ServerApp.run({ base, limit, showTable });
 }
 
-outputMessage = headerMesagge + outputMessage;
-console.log(outputMessage);
-const outputPath = "outputs";
-
-fs.mkdirSync(outputPath, { recursive: true });
-fs.writeFileSync(`${outputPath}/tabla-${base}.txt`, outputMessage);
-console.log("¡Archivo creado!");
