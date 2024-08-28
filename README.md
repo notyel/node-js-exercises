@@ -17,7 +17,7 @@ Este repositorio contiene una colección de ejercicios en Node.js junto con sus 
 
 ## Contribuciones
 
-Si tienes ejercicios interesantes en Node.js que te gustaría agregar a este repositorio, ¡siéntete libre de hacer una contribución! Simplemente realiza un "fork" del repositorio, agrega tus ejercicios y envía una solicitud de extracción.
+Si tienes ejercicios interesantes en **Node.js** que te gustaría agregar a este repositorio, ¡siéntete libre de hacer una contribución! Simplemente realiza un "fork" del repositorio, agrega tus ejercicios y envía una solicitud de extracción.
 
 ## Licencia
 
